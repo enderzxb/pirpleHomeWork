@@ -22,17 +22,17 @@ httpServer.listen(config.httpPort, function(){
 //All the server logic for both http and https Server
 let unifiedServer = function(req, res){
   //Get url and parse it
-    let parseUrl = url.parse(req.url, true);
+  let parseUrl = url.parse(req.url, true);
 
   //get path
-    let path = parseUrl.pathname;
-    let trimedPath = path.replace(/^\/+|\/+$/g,'');
+  let path = parseUrl.pathname;
+  let trimedPath = path.replace(/^\/+|\/+$/g,'');
 
   //Get query string as an object
-    let queryStringObject = parseUrl.query;
+  let queryStringObject = parseUrl.query;
 
   // Get http method
-    let method = req.method.toLowerCase();
+  let method = req.method.toLowerCase();
 
   //Get headers as an object
   let headers = req.headers;
